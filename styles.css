@@ -47,6 +47,20 @@ a:active {
     opacity: 50%;
 }
 
+.scramble-title {
+    text-align: center;
+    line-height: 25px;
+    padding-top: 2em;
+}
+
+#scramble-display {
+    font-size: 2.1em;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 0.5em;
+    line-height: 70px;
+}
+
 .sub, .repo {
     text-align: center;
     line-height: 25px;
@@ -58,7 +72,7 @@ a:active {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 20em;
+    padding: 10em;
 }
 
 .github-icon {
