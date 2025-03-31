@@ -1,10 +1,12 @@
-body, h1, h2, h3, h4, h5, h6, p{
+body, h1, h2, h3, h4, h5, h6, p, a{
     font-family: 'JetBrains Mono';
     color: white;
     opacity: 70%;
     padding: 0;
     padding-top: 0.2em;
     margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -17,25 +19,53 @@ h1 {
     padding-top: 0.8em;
 }
 
-#display {
-    font-size: 5em;
-    text-align: center;
-    padding-top: 1em;
-    color: #f2c549;
-    opacity: 70%;
+a:link {
+    color: white;
 }
 
-#yellow {
+a:visited {
+    color: white;
+}
+
+a:hover {
     color: #f2c549;
 }
 
+a:active {
+    color: #f2c549;
+} 
 
 .title {
     text-align: center;
 }
 
-.sub {
+#display {
+    font-size: 5em;
+    text-align: center;
+    padding-top: 1em;
+    color: #f2c549;
+    opacity: 50%;
+}
+
+.sub, .repo {
     text-align: center;
     line-height: 25px;
     padding-top: 0.9em;
+}
+
+.repo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20em;
+}
+
+.github-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.yellow {
+    color: #f2c549;
 }
