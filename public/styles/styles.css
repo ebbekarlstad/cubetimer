@@ -1,0 +1,85 @@
+body, h1, h2, h3, h4, h5, h6, p, a{
+    font-family: 'JetBrains Mono';
+    color: white;
+    opacity: 70%;
+    padding: 0;
+    padding-top: 0.2em;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #252526;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 5em;
+    padding-top: 0.8em;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: #f2c549;
+}
+
+a:active {
+    color: #f2c549;
+} 
+
+.title {
+    text-align: center;
+}
+
+#display {
+    font-size: 5em;
+    text-align: center;
+    padding-top: 1em;
+    color: #f2c549;
+    opacity: 50%;
+}
+
+.scramble-title {
+    text-align: center;
+    line-height: 25px;
+    padding-top: 2em;
+}
+
+#scramble-display {
+    font-size: 2.1em;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 0.5em;
+    line-height: 70px;
+}
+
+.sub, .repo {
+    text-align: center;
+    line-height: 25px;
+    padding-top: 0.9em;
+}
+
+.repo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10em;
+}
+
+.github-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.yellow {
+    color: #f2c549;
+}
