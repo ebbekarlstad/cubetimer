@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let startTime = 0;
     let elapsedTime = 0;
     let timerInterval;
+    let canStart = true;
 
     function formatTime(time) {
         const minutes = Math.floor(time / 60000);
@@ -17,12 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startTimer() {
-        if (!isRunning) {
+        if (!isRunning & canStart) {
             startTime = Date.now() - elapsedTime;
             timerInterval = setInterval(updateDisplay, 10);
             let display = document.getElementById("display");
             display.style.opacity = "90%";
             isRunning = true;
+            canStart = false;
         } else {
             // do nothing
         }
@@ -39,6 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Clears the timer and resets variables
+    function resetTimer() {
+        clearInterval(timerInterval);
+        isRunning = false;
+        elapsedTime = 0;
+        canStart = true; // Allow timer to start again
+        document.getElementById('display').textContent = '00:00:00';
+        document.getElementById("display").style.opacity = "100%";
+    }
+
     // Event listener for when key gets released (start)
     document.addEventListener('keyup', (e) => {
         if (e.code === 'Space') {
@@ -52,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.code === 'Space') {
             e.preventDefault();
             stopTimer();
+        }
+    });
+
+    // Event listener for when "r" key gets pressed (reset)
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'KeyR') {
+            e.preventDefault();
+            resetTimer();
         }
     });
 
